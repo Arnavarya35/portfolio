@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/a8140309dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .justified-text {
+            text-align: justify;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logof2.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#work">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <!----day--night--Mode---->
+                <!--<i class="fa-regular fa-sun"></i>---->
+                <!--<i class="fa-solid fa-moon" id="mode"></i>-->    
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Electronics & Computer Engineer</p>
+                <h1>Hi, I'm <span>Arnav</span> Arya</h1>
+            </div>
+        </div>
+    </div>
+
+<!---------------------------About-------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/user2.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="justified-text">I am currently pursuing a B.Tech in Electronics and Computer Engineering, with a strong interest in the field of technology. I had the opportunity to lead a team during internship and successfully complete several projects related to embedded systems, machine learning, and electronics. These experiences have further fueled my passion and desire to work in a corporate setting, where I can utilize my skills and continue to expand my knowledge in the ever-evolving world of technology. I am a young, passionate individual who is determined to accomplish any assigned task with utmost care, responsibility, and within the given timeframe.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Aug-Oct, 2023</span><br>Intern at ARDE-DRDO</li>
+                            <li><span>Apr, 2023 - Jun, 2024</span><br>Member of Outreach Department at VIT'C</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>B. Tech at Vellore Institute of Technology, Chennai</li>
+                            <li><span>2019-2021</span><br>12th at R. J. S. College, Saran, Bihar</li>
+                            <li><span>2019</span><br>10th at St. Paul's High School, Vaishali, Bihar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!-----------Projects---------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">                
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Embedded Project</h2>
+                    <p class="justified-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minima provident itaque eveniet distinctio quaerat, doloribus voluptatum quam vel dolorem assumenda error magni tempora accusamus mollitia, voluptates harum! Veniam, aliquam?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>ML Project</h2>
+                    <p class="justified-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minima provident itaque eveniet distinctio quaerat, doloribus voluptatum quam vel dolorem assumenda error magni tempora accusamus mollitia, voluptates harum! Veniam, aliquam?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>UI/UX Project</h2>
+                    <p class="justified-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minima provident itaque eveniet distinctio quaerat, doloribus voluptatum quam vel dolorem assumenda error magni tempora accusamus mollitia, voluptates harum! Veniam, aliquam?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------work------------>
+    <div id="work">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/work-4.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p class="justified-text">.......khiuadgdagbkjlasschisgbas.....Desicription about work1.....hiusgcgiusgcsfgvc......</p>
+                        
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work-5.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p class="justified-text">.......hnutduhdasniodhasiudg.....Desicription about work2.....uhiusgc8sgcibs......</p>  
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work-6.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p class="justified-text">.....sugusboysudwa9d9wdywd.......Desicription about work3.......jg8sg87gbsucs87c....</p>   
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#"class="btn"> See more</a>
+        </div>
+    </div>
+
+<!-----------contact----------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> arnavarya35@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 8757978170</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/arnav-arya-"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/arnav.arya_/?locale=en-US"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@arnavrealshot"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://github.com/Arnavarya35"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1Mj05_E5BI-LyPORV1oIHSiwuikVYtC2H?usp=sharing" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> © 2024 Arnav. Made with <i class="fa-regular fa-face-smile"></i>. All rights reserved.</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+    </script>
+
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+
+
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwYOjYx8zddOFr83msbeP_ySrbNQAWm_afM2JQNYmPqBDCXwaE_DXYqVu0cDRdLtWPeXQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+</html>
