@@ -82,6 +82,7 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 20%;
     font-size: 25px;
+    cursor: pointer;
 }
 .header-text h1{
     font-size: 60px;
@@ -116,6 +117,7 @@ nav ul li a:hover::after{
     font-size: 60px;
     font-weight:600;
     color: #fff;
+    cursor: pointer;
 }
 .tab-title{
     display: flex;
@@ -127,6 +129,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    color: #fff;
 }
 
 
@@ -158,49 +161,9 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/*------------Projects-------*/
-#projects{
-    padding: 30px 0;
-}
-.projects-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.projects-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: backgroung 0.5s, transform 0.5s;
-}
-.projects-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-.projects-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.projects-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.projects-list div:hover{
-    background: linear-gradient(145deg, #4a90e2, #357ab7, #2d699a, #24577a, #1a455c);
-    transform: translateY(-10px);
-
-}
-
-/*----------work----------*/
+/*------------work-------*/
 #work{
-    padding: 50px 0;
+    padding: 30px 0;
 }
 .work-list{
     display: grid;
@@ -208,17 +171,58 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
-.work{
+.work-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: backgroung 0.5s, transform 0.5s;
+}
+.work-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.work-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.work-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.work-list div:hover{
+    background: linear-gradient(145deg, #4a90e2, #357ab7, #2d699a, #24577a, #1a455c);
+    transform: translateY(-10px);
+
+}
+
+/*----------projects----------*/
+#projects{
+    padding: 50px 0;
+}
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projects{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
-.work img{
+.projects img{
     width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
+
 
 .layer{
     width: 100%;          /*make width and height to 0 so tat only when cursor is there it will show the text*/
@@ -260,10 +264,10 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
-.work:hover img{
+.projects:hover img{
     transform: scale(1.1);
 }
-.work:hover .layer{
+.projects:hover .layer{
     height: 100%;
 }
 
@@ -372,6 +376,14 @@ nav .fas{
         display: block;
         font-size: 25px;
     }
+
+    .projects-list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+        margin-top: 50px;
+    }
+
     /*----hiding menu list----*/
     nav ul{
         background: linear-gradient(145deg, #4a90e2, #357ab7, #2d699a, #24577a, #1a455c);
