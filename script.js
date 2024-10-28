@@ -138,7 +138,7 @@ const registrationForm = document.getElementById("registrationForm");
 registrationForm.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent the form from submitting immediately
 
-    /*
+    
     // Extract user input values
     const fullName = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
@@ -175,7 +175,7 @@ registrationForm.addEventListener("submit", (event) => {
     });
     xhr.send(data);
 
-    */
+    /*
     const formData = {
         fullName: document.getElementById("fullName").value,
         email: document.getElementById("email").value,
@@ -199,6 +199,7 @@ registrationForm.addEventListener("submit", (event) => {
     .catch((error) => {
         console.error('Error:', error);
     });
+    */
 });
 
 // Check for existing cookie
