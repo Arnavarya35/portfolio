@@ -34,9 +34,9 @@ nav ul{
     height: 100vh;
     background-image:  url(image/background5.png);
     background-size: cover;
-
     background-position: center;
 }
+
 
 .container{
     padding: 10px 10%;
