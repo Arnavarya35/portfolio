@@ -4,55 +4,51 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+
 html{
     scroll-behavior: Smooth;
 }
+
 body{
     background-color: #080808;
     color: #fff ;
 }
 
-/*----day---night---MODE-------
-
-:root{
-    --primary-color: #edf2fc;
-    --secondary-color: #212121;
-}
-#icon{
-    width: 30px;
-    cursor: pointer;
-}
-nav ul{
-    flex: 1;
-    text-align: right;
-}
-
----------------------*/
-
 #header{
     width: 100%;
     height: 100vh;
-    background-image:  url(image/background5.png);
+    background-image:  url(image/background.png);
     background-size: cover;
     background-position: center;
+    position: relative; /* Added to position the canvas correctly */
+    overflow: hidden; /* Prevents overflow of canvas */
 }
+
+#flyingCanvas {
+    position: absolute; /* Positioning the canvas absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    pointer-events: none; /* Allows clicks to pass through the canvas */
+    z-index: -1;
+}
+
 
 
 .container{
     padding: 10px 10%;
 }
-
 nav{
     display:flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap ;
 }
-
 .logo{
     width: 250px;
 }
-
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -69,7 +65,6 @@ nav ul li a::after{
     width: 0%;
     height: 3px;
     background: linear-gradient(145deg, #f5c94f, #e6b042, #d19b39, #ba8531, #a56f29);
-
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -78,7 +73,6 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
-
 .header-text{
     margin-top: 20%;
     font-size: 25px;
@@ -92,6 +86,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: goldenrod;
 }
+
 
 /*-----------------About--------------*/
 #about{
@@ -109,20 +104,33 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 5s;
+}
+.about-col-1 img:hover {
+    transform: rotateY(360deg);
 }
 .about-col-2{
     flex-basis: 60%;
 }
-.sub-title{
+
+.sub-title {
     font-size: 60px;
-    font-weight:600;
+    font-weight: 600;
     color: #fff;
     cursor: pointer;
+    position: relative;
 }
+
+.sub-title:hover {
+    text-shadow: 0 0 10px rgb(1, 60, 137);
+}
+
 .tab-title{
     display: flex;
     margin: 20px 0 40px;
 }
+
 .tab-links{
     margin-right: 50px;
     font-size: 18px;
@@ -131,8 +139,6 @@ nav ul li a:hover::after{
     position: relative;
     color: #fff;
 }
-
-
 .tab-links::after{    /* underline*/
     content: '';
     width: 0;
@@ -160,6 +166,7 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+
 
 /*------------work-------*/
 #work{
@@ -201,7 +208,8 @@ nav ul li a:hover::after{
 
 }
 
-/*----------projects----------*/
+
+/*----------Projects-----------*/
 #projects{
     padding: 50px 0;
 }
@@ -210,6 +218,8 @@ nav ul li a:hover::after{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
     margin-top: 50px;
+    animation: slideInLeft 1s ease-in-out 1s normal both;
+    transform: translateX(-150);
 }
 .projects{
     border-radius: 10px;
@@ -225,7 +235,7 @@ nav ul li a:hover::after{
 
 
 .layer{
-    width: 100%;          /*make width and height to 0 so tat only when cursor is there it will show the text*/
+    width: 100%;          /*make width and height to 0 so that only when cursor is there it will show the text*/
     height: 0%;
     background: linear-gradient(145deg, 
     rgba(74, 144, 226, 0.95), 
@@ -233,7 +243,6 @@ nav ul li a:hover::after{
     rgba(45, 105, 154, 0.95), 
     rgba(36, 87, 122, 0.95), 
     rgba(26, 69, 92, 0.95));
-
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -270,7 +279,6 @@ nav ul li a:hover::after{
 .projects:hover .layer{
     height: 100%;
 }
-
 .btn{
     display: block;
     margin: 50px auto;
@@ -278,6 +286,7 @@ nav ul li a:hover::after{
     border: 1px solid goldenrod;
     padding: 14px 50px;
     border-radius: 6px;
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
 }
@@ -287,14 +296,12 @@ nav ul li a:hover::after{
 
 
 /*-------------contact---------------*/
-
 .contact-left{
     flex-basis: 35%;
 }
 .contact-right{
     flex-basis: 60%;
 }
-
 .contact-left p{
     margin-top: 30px;
 }
@@ -314,13 +321,12 @@ nav ul li a:hover::after{
     display: inline-block;
     transition: transform 0.5s;
 }
-
 .social-icons a:hover{
     color: goldenrod;
     transform: translateY(-5px);
 }
 .btn.btn2{
-    display: inline-block; 
+    display: inline-block;
     background: linear-gradient(145deg, #f5c94f, #e6b042, #d19b39, #ba8531, #a56f29);
 }
 .contact-right form{
@@ -343,6 +349,53 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
+
+
+/* Modal background styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    align-items: left;
+    justify-content: center;
+    
+  }
+  
+  /* Modal content styling */
+  .modal-content {
+    background-color:black;
+    padding: 20px;
+    width: 400px;
+    max-height: 90%;
+    border-radius: 8px;
+    position: relative;
+    text-align: left;
+    overflow-y: auto;
+  }
+
+  input[type="checkbox"] {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 5px; 
+}
+
+  .close {                  /* Close button styling */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+ 
+
 .copyright{
     width: 100%;
     text-align: center;
@@ -354,6 +407,8 @@ form .btn2{
 .copyright i{
     color: goldenrod;
 }
+  
+
 
 
 /*-------------------CSS for Small Screen-----------*/
@@ -362,21 +417,22 @@ nav .fas{
 }
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(image/phone-background1.png);
+        background-image: url(image/phone1.png);
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 35%;
         font-size: 20px;
+        margin-left: 5px;
+        margin-right: 100px;
     }
     .header-text h1{
-        font-size: 35px;
-
+        font-size: 28px;
+        
     }
     nav .fas{
         display: block;
         font-size: 25px;
     }
-
     .projects-list{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -399,7 +455,6 @@ nav .fas{
     nav ul li{
         display: block;
         margin: 25px;
-
     }
     nav ul .fas{
         position: absolute;

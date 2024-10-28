@@ -15,10 +15,11 @@
             text-align: justify;
         }
     </style>
-
 </head>
+
+<!----------------------------BODY-------------------->
 <body>
-    
+      
     <div id="header">
         <div class="container">
             <nav>
@@ -31,19 +32,18 @@
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
-                <!----day--night--Mode---->
-                <!--<i class="fa-regular fa-sun"></i>---->
-                <!--<i class="fa-solid fa-moon" id="mode"></i>-->    
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
+            <canvas id="flyingCanvas"></canvas>       <!-------Canvas Background animation--------->
             <div class="header-text">
                 <p>Electronics & Computer Engineer</p>
-                <h1>Hi, I'm <span>Arnav</span> Arya</h1>
+                <h1>Hi, <br>
+                    I'm <span>Arnav</span> Arya</h1>
             </div>
         </div>
     </div>
 
-<!---------------------------About-------------------------->
+    <!---------------------------About-------------------------->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -52,7 +52,13 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p class="justified-text">I am currently pursuing a B.Tech in Electronics and Computer Engineering, with a strong interest in the field of technology. I had the opportunity to lead a team during internship and successfully complete several projects related to embedded systems, machine learning, and electronics. These experiences have further fueled my passion and desire to work in a corporate setting, where I can utilize my skills and continue to expand my knowledge in the ever-evolving world of technology. I am a young, passionate individual who is determined to accomplish any assigned task with utmost care, responsibility, and within the given timeframe.</p>
+                    <p class="justified-text">I am currently pursuing a B.Tech in Electronics and Computer Engineering, 
+                        with a strong interest in the field of technology. I had the opportunity to lead a team during 
+                        internship and successfully complete several projects related to embedded systems, machine learning 
+                        and electronics. These experiences have further fueled my passion and desire to work in a 
+                        corporate setting, where I can utilize my skills and continue to expand my knowledge in the 
+                        ever-evolving world of technology. I am a young, passionate individual who is determined to 
+                        accomplish any assigned task with utmost care, responsibility and within the given timeframe.</p>
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -87,7 +93,7 @@
     </div>
     
     
-<!-----------work---------->
+    <!---------------------------work------------------------->
     <div id="work">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
@@ -95,89 +101,90 @@
                 <div>
                     <i class="fa-solid fa-microchip"></i>
                     <h2>Embedded Project</h2>
-                    <p class="justified-text">Discover my embedded system projects that address critical health monitoring needs. Explore the Real-Time Pulse Monitoring Device, a cutting-edge system that enables valuable health insights. Dive into the Smart Wearable Health Monitoring Systems for Soldiers, an innovative solution designed to enhance the health and safety of soldiers through real-time monitoring and analysis in challenging environments.</p>
+                    <p class="justified-text">Discover my embedded system projects that address critical health monitoring needs. 
+                        Explore the Real-Time Pulse Monitoring Device, a cutting-edge system that enables valuable health insights. 
+                        Dive into the Smart Wearable Health Monitoring Systems for Soldiers, an innovative solution designed to 
+                        enhance the health and safety of soldiers through real-time monitoring and analysis in challenging environments.</p>
                     <a href="https://github.com/Arnavarya35/BPM">Learn more</a>
                 </div>
-
                 <div>
                     <i class="fa-solid fa-database"></i>
                     <h2>ML Project</h2>
-                     <p class="justified-text">Unleash the power of technology and healthcare with ML projects - Explore the groundbreaking Portable ECG Monitoring System Integrated with ML and HeartCare, a data analytics-driven solution for early detection of heart stroke. Take a leap into the future of healthcare innovation.</p>
+                     <p class="justified-text">Unleash the power of technology and healthcare with ML projects - Explore the groundbreaking 
+                        Portable ECG Monitoring System Integrated with ML and HeartCare, a data analytics-driven solution for early detection 
+                        of heart stroke. Take a leap into the future of healthcare innovation.</p>
                     <a href="#">Learn more</a>
                 </div>
-
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Project</h2>
-                    <p class="justified-text">Explore my interactive personal portfolio website - Immerse yourself in a captivating digital experience showcasing my professional details, projects, and works. From sleek designs to intuitive navigation, this interactive website offers a glimpse into my skills and expertise. Discover the depth of my portfolio and unravel the stories behind each project. Get ready to be inspired by the world of possibilities that awaits you.</p>
+                    <p class="justified-text">Explore my interactive personal portfolio website - Immerse yourself in a captivating digital 
+                        experience showcasing my professional details, projects, and works. From sleek designs to intuitive navigation, this 
+                        interactive website offers a glimpse into my skills and expertise. Discover the depth of my portfolio and unravel the 
+                        stories behind each project. Get ready to be inspired by the world of possibilities that awaits you.</p>
                     <a href="https://github.com/Arnavarya35/portfolio">Learn more</a>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!---------------projects------------>
+    <!-----------------------------projects------------------------------->
     <div id="projects">
         <div class="container">
             <h1 class="sub-title">My Projects</h1>
-            <div class="projects-list">
+            <div class="projects-list">  
+                                
+                    <div class="projects">
+                        <img src="image/work-4.jpg">
+                        <div class="layer">
+                            <h3>Real-Time Pulse Monitoring Device</h3>
+                            <a href="https://github.com/Arnavarya35/BPM"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="projects">
+                      <img src="image/work-6.jpg">
+                        <div class="layer">
+                            <h3>Personal Portfolio</h3>
+                            <a href="https://github.com/Arnavarya35/portfolio"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="projects">
+                        <img src="image/work-9.png">
+                        <div class="layer">
+                            <h3>HeartCare: Harnessing Data Analytics for Early Detection of Heart Disease</h3>
+                            <a href="https://github.com/Arnavarya35/HeartCare"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    
+                                      
+                    <div class="projects">
+                        <img src="image/work-5.jpg">
+                        <div class="layer">
+                            <h3>Portable ECG Monitoring System Integrated with ML</h3>
+                            <a href="https://github.com/Arnavarya35/ECG"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>    
+                    <div class="projects">
+                        <img src="image/work-7.png">
+                        <div class="layer">
+                            <h3>Smart Wearable Health Monitoring Systems for Soldiers</h3>
+                            <a href="https://github.com/Arnavarya35/Smart-Wearable"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>         
+                    <div class="projects">
+                        <img src="image/work-8.png">
+                        <div class="layer">
+                            <h3>SonicAccess: Access Permission Based on Voice Identification</h3>
+                            <a href="https://github.com/Arnavarya35/SonicAccess"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>                                     
                 
-                <div class="projects">
-                    <img src="image/work-4.jpg">
-                    <div class="layer">
-                        <h3>Real-Time Pulse Monitoring Device</h3>
-                        <a href="https://github.com/Arnavarya35/BPM"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="projects">
-                    <img src="image/work-7.png">
-                    <div class="layer">
-                        <h3>Smart Wearable Health Monitoring Systems for Soldiers</h3>
-                        <a href="https://github.com/Arnavarya35/Smart-Wearable"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                
-
-                <div class="projects">
-                    <img src="image/work-9.png">
-                    <div class="layer">
-                        <h3>HeartCare: Harnessing Data Analytics for Early Detection of Heart Disease</h3>
-                        <a href="https://github.com/Arnavarya35/HeartCare"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <div class="projects">
-                    <img src="image/work-5.jpg">
-                    <div class="layer">
-                        <h3>Portable ECG Monitoring System Integrated with ML</h3>
-                        <a href="https://github.com/Arnavarya35/ECG"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                
-
-                <div class="projects">
-                    <img src="image/work-6.jpg">
-                    <div class="layer">
-                        <h3>Personal Portfolio</h3>
-                        <a href="https://github.com/Arnavarya35/portfolio"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="projects">
-                    <img src="image/work-8.png">
-                    <div class="layer">
-                        <h3>SonicAccess: Access Permission Based on Voice Identification</h3>
-                        <a href="https://github.com/Arnavarya35/SonicAccess"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                
-
-            </div>
+            </div>    
             <a href="#"class="btn"> See more</a>
         </div>
     </div>
 
-<!-----------contact----------->
+    <!---------------------------contact-------------------------->
     <div id="contact">
         <div class="container">
             <div class="row">
@@ -201,64 +208,66 @@
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
+                    
+
+                    <!------Registration Form------------>
+                    <p style="margin-top: 20px;">Enjoying what you see? </p> 
+                    <p>   Register to keep in touch and receive updates on my latest work!</p>
+                    <div style="display: flex; margin-top: -40px;">
+                        <button type="button" class="btn btn2" id="registerBtn" style="margin-left: 0px;">Register</button>
+                    </div>
+                                        
+                        <!-- Registration Modal -->
+                        <div id="registerModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form id="registrationForm" method="post" action="register.php">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                
+                            <label for="phone">Mobile Number:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                
+                            <label for="occupation">Occupation/Job Title:</label>
+                            <input type="text" id="occupation" name="occupation">
+                        
+                            <label for="consent">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                I agree to the terms and conditions.
+                            </label>
+                
+                            <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                        </div>
+                        </div>                             
                 </div>
+
+
             </div>
         </div>
+
         <div class="copyright">
             <p> © 2024 Arnav. Made with <i class="fa-regular fa-face-smile"></i>. All rights reserved.</p>
         </div>
     </div>
+   
 
+<!-------------*********----------------JAVASCRIPT---------------*********------------------>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links")
-        var tabcontents = document.getElementsByClassName("tab-contents")
-        
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
+    <script src="E:/Tester/portfolio_test/script.js"></script>
     
-    </script>
-
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
-
-
-  
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwYOjYx8zddOFr83msbeP_ySrbNQAWm_afM2JQNYmPqBDCXwaE_DXYqVu0cDRdLtWPeXQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg=document.getElementById("msg")
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML="Message sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML=""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
 
 </body>
 </html>
