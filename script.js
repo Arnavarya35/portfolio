@@ -111,35 +111,22 @@ function checkCookie(name) {
     return getCookie(name) !== '';
 }
 
-// Get modal element and buttons
-const registerModal = document.getElementById("registerModal");
-const registerBtn = document.getElementById("registerBtn");
-const closeBtn = document.querySelector(".close");
-
 // Open modal when Register button is clicked
+const registerBtn = document.getElementById("registerBtn");
+const registerModal = document.getElementById("registerModal");
 registerBtn.addEventListener("click", () => {
     registerModal.style.display = "flex";
 });
 
-// Close modal when 'x' (close button) is clicked
-closeBtn.addEventListener("click", () => {
+// Close modal when close button is clicked
+document.querySelector(".close").addEventListener("click", () => {
     registerModal.style.display = "none";
 });
 
-// Close modal if user clicks outside of the modal content
-window.addEventListener("click", (event) => {
-    if (event.target === registerModal) {
-        registerModal.style.display = "none";
-    }
-});
-
 // Handle registration form submission
-const registrationForm = document.getElementById("registrationForm");
-registrationForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent the form from submitting immediately
+document.getElementById("registrationForm").addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    
-    // Extract user input values
     const fullName = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
     const username = document.getElementById("username").value;
@@ -147,21 +134,20 @@ registrationForm.addEventListener("submit", (event) => {
     const phone = document.getElementById("phone").value;
     const occupation = document.getElementById("occupation").value;
 
-    // Set cookies for user data (set to expire in 30 days)
     setCookie("fullName", fullName, 30);
     setCookie("email", email, 30);
 
-    //// Optionally, you can now submit the form if you're not using AJAX
-    //registrationForm.submit();
-
-    // Send data via AJAX
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "register.php", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            alert(xhr.responseText); // Display success message
-            registerModal.style.display = "none"; // Close modal
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                alert(xhr.responseText);
+                registerModal.style.display = "none";
+            } else {
+                alert("Error: Registration failed.");
+            }
         }
     };
 
@@ -174,32 +160,6 @@ registrationForm.addEventListener("submit", (event) => {
         occupation
     });
     xhr.send(data);
-
-    /*
-    const formData = {
-        fullName: document.getElementById("fullName").value,
-        email: document.getElementById("email").value,
-        username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
-        phone: document.getElementById("phone").value,
-        occupation: document.getElementById("occupation").value,
-    };
-
-    fetch('register.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-    */
 });
 
 // Check for existing cookie
